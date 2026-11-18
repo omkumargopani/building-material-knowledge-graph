@@ -1,0 +1,27 @@
+@prefix ex: <https://example.org/building-kg/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:BuildingShape a sh:NodeShape ;
+    sh:targetClass ex:Building ;
+    sh:property [ sh:path ex:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:name ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+ex:ComponentShape a sh:NodeShape ;
+    sh:targetClass ex:Component ;
+    sh:property [ sh:path ex:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:partOf ; sh:class ex:Building ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:madeOf ; sh:class ex:Material ; sh:minCount 1 ] .
+
+ex:MaterialShape a sh:NodeShape ;
+    sh:targetClass ex:Material ;
+    sh:property [ sh:path ex:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:name ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+ex:FindingShape a sh:NodeShape ;
+    sh:targetClass ex:Finding ;
+    sh:property [ sh:path ex:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:aboutComponent ; sh:class ex:Component ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:reportsSubstance ; sh:class ex:Substance ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:supportedBy ; sh:class ex:SourceDocument ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ex:sourcePage ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:minInclusive 1 ] .

@@ -1,0 +1,13 @@
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+neo4j_data/
+data/building_graph.ttl
+.DS_Store
+.vscode/

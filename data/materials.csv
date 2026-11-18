@@ -1,0 +1,4 @@
+material_id,name,category,density_kg_m3
+M001,Legacy Insulation,Insulation,120
+M002,Older Paint,Coating,1450
+M003,Concrete,Structural,2400

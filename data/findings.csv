@@ -1,0 +1,4 @@
+finding_id,component_id,substance_id,substance_name,report_id,report_title,source_page,status
+F001,W001,S001,Asbestos,R001,Inspection Report A,12,reported
+F002,D001,S002,Lead,R002,Inspection Report B,7,reported
+F003,C001,S001,Asbestos,R003,Inspection Report C,5,reported

@@ -1,0 +1,5 @@
+component_id,building_id,name,location,material_id
+W001,B001,Exterior Wall,North Wing,M001
+D001,B001,Interior Door,Level 2,M002
+C001,B002,Ceiling,Level 1,M001
+F001,B002,Floor,Ground Level,M003
